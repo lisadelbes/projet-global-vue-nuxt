@@ -18,7 +18,7 @@
             <router-link to="/about" class="hover:text-primary">A propos</router-link>>
           </li>
           <li class="rounded-box">
-            <a href="#" class="hover:text-primary">Services</a>
+            <router-link to="/exo" class="hover:text-primary">Exo binding</router-link>
           </li>
           <li class="rounded-box">
             <a href="#" class="hover:text-primary">Contact</a>

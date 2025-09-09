@@ -14,6 +14,11 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: () => import('../views/About.vue')
+        },
+        {
+            path: '/exo',
+            name: 'exo',
+            component: () => import('../views/Tp-binding.vue')
         }
     ]
 });
