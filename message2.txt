@@ -1,0 +1,79 @@
+1 Soluce possible 
+```html
+<template>
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="card bg-base-100 shadow-xl rounded-box p-6">
+            <h5 class="card-title text-2xl font-bold mb-4">TP Event Binding Mode</h5>
+
+            <!-- Section pour la gestion des événements de clavier -->
+            <div class="mt-6 mb-4 card bg-base-200 shadow-lg rounded-box p-4">
+                <h6 class="text-xl font-semibold mb-2"><code>v-on:keyup</code> ou <code>@keyup</code></h6>
+                <!-- <p class="text-sm opacity-75 mb-4">
+                    Nous utilisons ici la directive <code>v-on:keyup</code> pour écouter chaque frappe de clavier et
+                    mettre à jour la variable `leInput`.
+                </p> -->
+                <label class="form-control w-full">
+                    <div class="label">
+                        <span class="label-text">Saisissez du texte</span>
+                    </div>
+                    <input v-on:keyup="afficherInput($event)" type="text" placeholder="Tapez ici..."
+                        class="input input-bordered w-full" />
+                </label>
+                <div class="mt-3 p-3 bg-base-100 rounded-box shadow">
+                    <p>Le contenu de l'input est : <span class="badge badge-accent">{{ leInput }}</span></p>
+                </div>
+            </div>
+
+            <!-- Section pour le modificateur d'événement .esc -->
+            <div class="mt-6 mb-4 card bg-base-200 shadow-lg rounded-box p-4">
+                <h6 class="text-xl font-semibold mb-2">Modificateur d'événement</h6>
+                <!-- <p class="text-sm opacity-75 mb-4">
+                    Le gestionnaire d'événement ne sera déclenché que lorsque la touche `Échap` (`Esc`) est relâchée.
+                </p> -->
+                <label class="form-control w-full">
+                    <div class="label">
+                        <span class="label-text">Saisissez du texte et appuyez sur 'Échap'</span>
+                    </div>
+                    <input @keyup.esc="afficherInputConfirm($event)" type="text"
+                        placeholder="Tapez et appuyez sur 'Esc'" class="input input-bordered w-full" />
+                </label>
+                <div class="mt-3 p-3 bg-base-100 rounded-box shadow">
+                    <p>La valeur confirmée par 'Échap' est : <span class="badge badge-primary">{{ leInputConfirm }}</span></p>
+                </div>
+            </div>
+
+            <!-- Section pour l'événement de clic -->
+            <div class="mt-6 mb-4 card bg-base-200 shadow-lg rounded-box p-4">
+                <h6 class="text-xl font-semibold mb-2">Événement <code>@click</code></h6>
+                <!-- <p class="text-sm opacity-75 mb-4">
+                    Nous utilisons la directive <code>@click</code> pour lancer une action, ici l'affichage d'une
+                    alerte.
+                </p> -->
+                <button @click="afficherAlerte" class="btn btn-error text-white">
+                    Afficher une alerte
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang='js'>
+const leInput = ref('');
+const leInputConfirm = ref('');
+
+function afficherInput(event) {
+    console.log(event);
+    leInput.value = event.target.value;
+};
+
+function afficherInputConfirm(event) {
+    leInputConfirm.value = event.target.value;
+};
+
+// NOTE: L'utilisation de `alert()` n'est pas recommandée dans un environnement de production.
+// Il est préférable d'utiliser des modaux ou des notifications personnalisées.
+function afficherAlerte() {
+    alert('Alerte !');
+};
+</script>
+```
