@@ -1,11 +1,13 @@
 <template>
   <div class="container">
     <input type="text" placeholder="Écris du texte" v-model="saisie" />
-    <input type="text" placeholder="Écris du texte" v-model="saisiebis" />
+  
 
     <h2 :class="classeAppliquee":style="{ backgroundColor: saisiebis }">
       Vérification de la réaction à la saisie
     </h2>
+
+      <input type="text" placeholder="Écris la couleur de fond" v-model="saisiebis" />
   </div>
 </template>
 

@@ -34,6 +34,11 @@ const router = createRouter({
             path: '/evalstyledynamic',
             name: 'evalstyledynamic',
             component: () => import('../views/Eval-StyleDynamic.vue')
+        },
+        {
+            path: '/exo-films',
+            name: 'exo-films',
+            component: () => import('../views/Exo-films.vue')
         }
     ]
 });
