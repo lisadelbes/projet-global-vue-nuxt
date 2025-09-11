@@ -24,11 +24,9 @@
                 Votre film : {{ tab_titres_films }}
             </p> -->
 
-             <p v-for="item in tab_titres_films" class="text-gray-500">
-                Votre film : {{ item }}
+             <p @click="info(item, index)" v-for="(item, index) in tab_titres_films" class="text-gray-500">
+                Votre nouveau film n°{{ index +1 }} : {{ item }}
             </p>
-
-
         </div>
     </div>
 </template>
@@ -41,7 +39,11 @@ const tab_titres_films = ref([]);
 
 function ajout_films(){
     tab_titres_films.value.push(titre.value);
-    console.log(tab_titres_films);
+    titre.value = "";
+}
+
+function info(item, index) {
+    tab_titres_films.value.splice(index, 1);
 }
 
 
