@@ -20,16 +20,21 @@
                 Pas encore de films dans votre liste ? Veuillez en ajouter un.
             </p>
 
-            <p v-else class="text-gray-500">
-                {{ tab_titres_films }}
+            <!-- <p v-else class="text-gray-500">
+                Votre film : {{ tab_titres_films }}
+            </p> -->
+
+             <p v-for="item in tab_titres_films" class="text-gray-500">
+                Votre film : {{ item }}
             </p>
+
 
         </div>
     </div>
 </template>
 
 <script setup lang="js">
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
 const titre = ref("");
 const tab_titres_films = ref([]);
