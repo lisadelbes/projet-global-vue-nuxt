@@ -26,9 +26,14 @@ const router = createRouter({
             component: () => import('../views/NotFoundView.vue')
         },
         {
-            path: '/exo-syledynamic',
-            name: 'exo-styledynamic',
+            path: '/exostyledynamic',
+            name: 'exostyledynamic',
             component: () => import('../views/Exo-StyleDynamic.vue')
+        },
+        {
+            path: '/evalstyledynamic',
+            name: 'evalstyledynamic',
+            component: () => import('../views/Eval-StyleDynamic.vue')
         }
     ]
 });

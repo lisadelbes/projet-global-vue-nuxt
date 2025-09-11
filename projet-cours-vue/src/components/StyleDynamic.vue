@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div @click="clickcard" :class="{card1: isActive}">
+    <div @click="clickcard(1)" :class="{card1: isActive}">
       <h3>Card 1</h3>
     </div>
-    <div @click="clickcard" :class="{card2: isActivebis}">
+    <div @click="clickcard(2)" :class="{card2: isActivebis}">
       <h3>Card 2</h3>
     </div>
   </div>
@@ -15,8 +15,12 @@ const isActive = ref(true);
 const isActivebis = ref(true);
 
 function clickcard(number){
-    isActive.value = !isActive.value;
-    isActivebis.value = !isActivebis.value;
+    if (number == 1){
+        isActive.value = !isActive.value;
+    }
+    if (number == 2){
+        isActivebis.value = !isActivebis.value;
+    }
 }
 </script>
 
