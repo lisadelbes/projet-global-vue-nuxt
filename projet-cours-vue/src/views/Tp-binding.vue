@@ -2,7 +2,7 @@
   <footer class="footer p-10 bg-base-300 text-base-content rounded-box shadow-lg">
     <div class="container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Section "À propos" -->
+
         <div>
           <span class="footer-title">Coucou petit exo binding</span>
           <p> {{ name }} </p>

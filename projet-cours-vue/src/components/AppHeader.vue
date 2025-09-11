@@ -21,7 +21,7 @@
             <router-link to="/exo" class="hover:text-primary">Exo binding</router-link>
           </li>
           <li class="rounded-box">
-            <a href="#" class="hover:text-primary">Contact</a>
+            <a href="#" to="/exo-syledynamic"class="hover:text-primary">Exo style Dynamic</a>
           </li>
         </ul>
       </nav>

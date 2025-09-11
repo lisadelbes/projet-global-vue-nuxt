@@ -24,6 +24,11 @@ const router = createRouter({
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
             component: () => import('../views/NotFoundView.vue')
+        },
+        {
+            path: '/exo-syledynamic',
+            name: 'exo-styledynamic',
+            component: () => import('../views/Exo-StyleDynamic.vue')
         }
     ]
 });
