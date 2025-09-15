@@ -39,7 +39,13 @@ const router = createRouter({
             path: '/exo-films',
             name: 'exo-films',
             component: () => import('../views/Exo-films.vue')
+        },
+        {
+            path: '/exo-props',
+            name: 'exo-props',
+            component: () => import('../components/friendsList.vue')
         }
+
     ]
 });
 

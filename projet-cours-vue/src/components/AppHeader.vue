@@ -29,6 +29,9 @@
           <li class="rounded-box">
             <router-link to="/exo-films"class="hover:text-primary">Exo films</router-link>
           </li>
+           <li class="rounded-box">
+            <router-link to="/exo-props"class="hover:text-primary">Exo props</router-link>
+          </li>
         </ul>
       </nav>
 

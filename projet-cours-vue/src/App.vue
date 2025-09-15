@@ -6,6 +6,11 @@
     <main class="flex-1 w-full max-w-7xl mx-auto p-4 md:p-8">
       <!-- Ici on aura la router view -->
        <router-view></router-view>
+       <Apimeteo />
+       <br>
+       <hr>
+       <br>
+       <Props foo ="toto" username="coucou"></Props>
     </main>
     <!-- Footer en bas de la page -->
     <AppFooter />
@@ -16,6 +21,9 @@
 <script setup>
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
+import Apimeteo from './components/api-meteo.vue';
+import Props from './components/props.vue';
+
 // Pas de logique spécifique nécessaire ici,
 // Nuxt gère automatiquement la mise en page
 // avec les composants de layout.

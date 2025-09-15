@@ -1,3 +1,4 @@
 <template>
-<p> ACCUEIL </p>
+    <br>
+    </br>
 </template>
