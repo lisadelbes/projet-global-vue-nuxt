@@ -45,8 +45,6 @@ function ajout_films(){
 function info(item, index) {
     tab_titres_films.value.splice(index, 1);
 }
-
-
 </script>
 
 <style scoped>

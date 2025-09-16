@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import oneFriend from './oneFriend.vue';
-
+import newFriend from './NewFriends.vue';
 
 const lesAmis = ref([
     {
@@ -34,11 +34,42 @@ const lesAmis = ref([
     }
 ]);
 
+function supprimerdata(id_child) {
+  lesAmis.value = lesAmis.value.filter((ami) => ami.id !== id_child);
+}
+
+function changepremium(id_child){
+    const ami = lesAmis.value.find((a) => a.id === id_child);
+    ami.premium = !ami.premium;
+    console.log(ami)
+}
+
+// const friendnew = ref({})
+function ajoutamis(data){
+    // newfriend.value = {
+    //     id: data.id,
+    //     name: data.name,
+    //     phone: data.name,
+    //     email: data.email,
+    //     premium: false
+    // }
+
+    
+    // lesAmis.value.push(newfriend.value);
+    console.log(data)
+}
+
+
 </script>
 
 <template>
-    <one-friend v-for="item in lesAmis" v-bind:id="item.id" v-bind:unAminame="item.name" v-bind:unAmiphone="item.phone" v-bind:unAmimail="item.email" v-bind:premium= "item.premium"> 
+    <new-friend @addfriend="ajoutamis"> </new-friend>
+    <one-friend v-for="item in lesAmis" v-bind:id="item.id" v-bind:unAminame="item.name" v-bind:unAmiphone="item.phone" v-bind:unAmimail="item.email" v-bind:premium= "item.premium" v-on:sup="supprimerdata" v-on:ch="changepremium"> 
+    <!-- Utilisez le composant comme ceci -->
     </one-friend>
+     <!-- <p @click="ajoutamis(item, index)"  class="text-gray-500">
+                Nouvel ami : {{ item }}
+    </p> -->
 </template>
 
 <style scoped>

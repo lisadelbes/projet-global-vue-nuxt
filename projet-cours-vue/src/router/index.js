@@ -41,9 +41,14 @@ const router = createRouter({
             component: () => import('../views/Exo-films.vue')
         },
         {
-            path: '/exo-props',
-            name: 'exo-props',
+            path: '/friendsList',
+            name: 'friendsList',
             component: () => import('../components/friendsList.vue')
+        },
+        {
+            path: '/emit',
+            name: 'emit',
+            component: () => import('../views/emit.vue')
         }
 
     ]

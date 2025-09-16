@@ -4,7 +4,7 @@
       <!-- Logo et nom de l'application -->
       <div class="flex-1">
         <a href="/" class="btn btn-ghost normal-case text-xl font-bold text-primary">
-          MaNuxtApp
+          Lisa App
         </a>
       </div>
 
@@ -12,10 +12,10 @@
       <nav class="flex-none hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
           <li class="rounded-box">
-            <router-link to="/" class="hover:text-primary">Accueil</router-link>>
+            <router-link to="/" class="hover:text-primary">Accueil</router-link>
           </li>
           <li class="rounded-box">
-            <router-link to="/about" class="hover:text-primary">A propos</router-link>>
+            <router-link to="/about" class="hover:text-primary">A propos</router-link>
           </li>
           <li class="rounded-box">
             <router-link to="/exo" class="hover:text-primary">Exo binding</router-link>
@@ -30,7 +30,10 @@
             <router-link to="/exo-films"class="hover:text-primary">Exo films</router-link>
           </li>
            <li class="rounded-box">
-            <router-link to="/exo-props"class="hover:text-primary">Exo props</router-link>
+            <router-link to="/friendsList"class="hover:text-primary">Exo props friends</router-link>
+          </li>
+          <li class="rounded-box">
+            <router-link to="/emit"class="hover:text-primary">Exo emit</router-link>
           </li>
         </ul>
       </nav>
