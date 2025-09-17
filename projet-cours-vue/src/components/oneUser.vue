@@ -1,8 +1,21 @@
 <script setup lang="js">
 
 const props = defineProps({
-  name: String,
-  age: Number,
+  name: {
+    type: String,
+    required: true,
+  },
+  age: {
+    type: Number,
+    required: true,
+    validator: (value) => {
+      if (value <= 0) {
+        console.error('L’âge doit être un nombre positif !');
+        return false;
+      }
+      return true;
+    },
+  }
 })
 
 

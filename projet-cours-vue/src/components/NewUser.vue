@@ -1,17 +1,31 @@
 <script setup lang="js">
-import { defineEmits , ref } from 'vue'
+import { defineEmits, ref } from 'vue'
 
 const emit = defineEmits(["ajout"]);
 
-const nom = ref("")
-const age = ref("")
+const nom = ref("");
+const age = ref("");
 
+function validateUser(nomValue, ageValue) {
+  if (typeof nomValue !== 'string') {
+    return false;
+  }
+  const ageNumber = Number(ageValue);
+  if (isNaN(ageNumber) || ageNumber <= 0) {
+    return false;
+  }
+  return true;
+}
 
 function adduser() {
-    emit("ajout", {
-        nom: nom.value,
-        age: age.value   
-    });
+  if (!validateUser(nom.value, age.value)) {
+    return;
+  }
+
+  emit("ajout", {
+    nom: nom.value.trim(),
+    age: Number(age.value)
+  });
 }
 </script>
 
