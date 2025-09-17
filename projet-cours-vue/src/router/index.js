@@ -54,6 +54,11 @@ const router = createRouter({
             path: '/exocom',
             name: 'exocom',
             component: () => import('../components/TP-communication.vue')
+        },
+        {
+            path: '/exochart',
+            name: 'exochart',
+            component: () => import('../components/chartjs.vue')
         }
     ]
 });

@@ -38,6 +38,9 @@
             <li class="rounded-box">
             <router-link to="/exocom"class="hover:text-primary">Exo TP com</router-link>
           </li>
+          <li class="rounded-box">
+            <router-link to="/exochart"class="hover:text-primary">Exo chart</router-link>
+          </li>
         </ul>
       </nav>
 
