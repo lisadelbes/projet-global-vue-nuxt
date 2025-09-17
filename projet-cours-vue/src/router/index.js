@@ -49,8 +49,12 @@ const router = createRouter({
             path: '/emit',
             name: 'emit',
             component: () => import('../views/emit.vue')
+        },
+        {
+            path: '/exocom',
+            name: 'exocom',
+            component: () => import('../components/TP-communication.vue')
         }
-
     ]
 });
 

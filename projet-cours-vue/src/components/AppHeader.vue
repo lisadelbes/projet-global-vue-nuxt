@@ -35,6 +35,9 @@
           <li class="rounded-box">
             <router-link to="/emit"class="hover:text-primary">Exo emit</router-link>
           </li>
+            <li class="rounded-box">
+            <router-link to="/exocom"class="hover:text-primary">Exo TP com</router-link>
+          </li>
         </ul>
       </nav>
 
