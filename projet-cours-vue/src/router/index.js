@@ -12,7 +12,7 @@ const router = createRouter({
         },
         {
             path: '/about',
-            name: 'about',
+            name: 'about',npm i -D daisyui@latest
             component: () => import('../views/About.vue')
         },
         {
